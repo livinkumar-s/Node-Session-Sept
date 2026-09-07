@@ -1,0 +1,41 @@
+Node 
+-----
+>> A runtime environment that allows JS to run outside the browser.
+command to execute JS --> node fileName.js
+
+JavaScript 
+------------
+>> Single Threaded, Dynamically typed, event-driven Programming Language.
+
+frontend ---> events happening in page (click, mouseover) --> JS triggered
+server --> events happening in the server (req) --> JS triggered.
+
+In built Objects 
+-------------------
+Frontend --> document, console....
+Node ---> fs, path, console......
+
+Asynchronous Operations (Event Looping)(non blocking IO)
+---------------------------
+Synchronous Operations --> immediate tasks
+Asynchronous Operations(CB, Promise) --> task can finish later (Ex: setTimeout, fetch...)
+
+Modules 
+---------
+>> It is a reusable piece of code.
+
+Exporting 
+----------------
+module.exports={
+    data, data
+}
+
+Import 
+------
+const {d1,d2}=require(file path)
+
+npm --> node package manager
+------------------------------
+To initiate npm directory --> npm init
+
+to install a package ---> npm install package
