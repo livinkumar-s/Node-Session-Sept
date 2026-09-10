@@ -37,5 +37,16 @@ const {d1,d2}=require(file path)
 npm --> node package manager
 ------------------------------
 To initiate npm directory --> npm init
-
 to install a package ---> npm install package
+
+Callback Asynchronous Operations 
+-----------------------------------
+Callback Functions ---> Functions that are passed as an argument to another function.
+
+Promise Asynchronous Operations 
+---------------------------------
+.try, .catch, .finally
+async, await
+
+
+.fetch() 
