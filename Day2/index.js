@@ -43,13 +43,31 @@
 
 const fs = require("fs")
 
-// fs.readFile("./text1.txt","utf-8",(error,data)=>{
-//     if(error){
-//         console.log(error);
-//         return
-//     }
+fs.readFile("./text1.txt","utf-8",(err,data)=>{
+    if(err){
+        return console.log(err);
+    }
+    console.log(data);
+})
+
+// fs.readFile("./text.txt",{encoding:"utf-8"}).then((data)=>{
 //     console.log(data);
+// }).catch((err)=>{
+//     console.log(err);
 // })
+
+async function readingFile(){
+    try{
+        const data=await fs.readFile("./text.txt",{encoding:"utf-8"})
+        console.log(data);
+        
+    }
+    catch(err){
+        console.log(err);
+    }
+}
+
+readingFile()
 
 // console.log(1);
 // console.log(2);
@@ -65,35 +83,35 @@ const fs = require("fs")
 //     }
 // })
 
-function getUserDetail(cb) {
-    setTimeout(() => {
-        console.log("User data Retrived");
-        cb()
-    }, 1000)
-}
+// function getUserDetail(cb) {
+//     setTimeout(() => {
+//         console.log("User data Retrived");
+//         cb()
+//     }, 1000)
+// }
 
-function getUserPost(cb) {
-    setTimeout(() => {
-        console.log("User Post Retrived");
-        cb()
-    }, 2000)
-}
+// function getUserPost(cb) {
+//     setTimeout(() => {
+//         console.log("User Post Retrived");
+//         cb()
+//     }, 2000)
+// }
 
-function getPostDetail(cb) {
-    setTimeout(() => {
-        console.log("Post Details Retrived");
-        cb()
-    }, 500)
-}
+// function getPostDetail(cb) {
+//     setTimeout(() => {
+//         console.log("Post Details Retrived");
+//         cb()
+//     }, 500)
+// }
 
-getUserDetail(
-    () => {
-        getUserPost(() => {
-            getPostDetail(() => {
-                console.log("Done");
-            })
-        })
-    }
-)
+// getUserDetail(
+//     () => {
+//         getUserPost(() => {
+//             getPostDetail(() => {
+//                 console.log("Done");
+//             })
+//         })
+//     }
+// )
 // getUserPost()
 // getPostDetail()
