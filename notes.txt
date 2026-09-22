@@ -45,8 +45,39 @@ Callback Functions ---> Functions that are passed as an argument to another func
 
 Promise Asynchronous Operations 
 ---------------------------------
-.try, .catch, .finally
+.then, .catch, .finally
 async, await
 
+HTTP Module 
+------------
+HyperText Transfer Protocol
 
-.fetch() 
+It is a communication protocol that allows clients and servers to exchange informations.
+
+Client(webpage, mobileApp, Postman)
+--Req-->
+Node(Server)
+--Res-->
+Client
+
+URL 
+------
+
+Method
+---------
+GET --> Retrive
+POST --> To Send data
+PUT --> UPDATE a data
+PATCH --> Update a part of data
+DELETE --> DELETE
+
+Endpoint --> Method + path(/keyword)
+
+Header 
+--------
+
+Params 
+---------
+
+Query 
+------
