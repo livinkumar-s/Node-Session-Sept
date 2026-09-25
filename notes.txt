@@ -48,6 +48,11 @@ Promise Asynchronous Operations
 .then, .catch, .finally
 async, await
 
+NPM - Node Package Manager 
+----------------------------
+to initiate NPM --> npm init
+to install a package --> npm install packagename
+
 HTTP Module 
 ------------
 HyperText Transfer Protocol
@@ -62,6 +67,12 @@ Client
 
 URL 
 ------
+https://google.com/kohli/56?id=2?name=leo
+
+google.com --> domain 
+/kohli --> path
+/56 --> params
+?id=2 --> query
 
 Method
 ---------
@@ -75,9 +86,40 @@ Endpoint --> Method + path(/keyword)
 
 Header 
 --------
+>> contain additional information about the request
+("Authorization")
 
-Params 
----------
+Status code 
+-----------
+it tells the client about the response.
+2**  --> Success 
+3** --> Redirected
+4** --> client error (404)
+5** --> server error
 
-Query 
+JSON
 ------
+>> JavaScript Object Notation.
+"{"name":"ken","age":"72"}"
+
+Body 
+-----
+>> body can be attached only with POST, PUT, PATCH req
+
+client --> req(method, headers, body, headers, params, query)
+|
+|
+Server  -- Response
+|
+|
+client
+
+Server 
+--------
+GET /api/contact  --> send all contacts
+POST /api/contact (body(name,phone)) --> add contact.
+DELETE /api/contact/name (params(name)) --> deletes the contact...
+
+
+Middleware 
+--------------
