@@ -123,3 +123,34 @@ DELETE /api/contact/name (params(name)) --> deletes the contact...
 
 Middleware 
 --------------
+>> It is a fuction that runs between the client req and the final response
+
+Common Uses 
+-------------
+>> Body parsing
+>> Authentication
+
+Routes 
+--------
+>> It defines what server should do when a client5 req a specific URL using a specific HTTP method
+
+
+
+UserData
+---------
+{
+    id,name,age
+}
+
+
+GET /api/user/ --> {
+    success:true, data: all user data
+}
+
+POST /api/user/--> add user 
+
+GET /api/user/{id} --> single user data
+
+PUT /api/user/{id}  --> updates a user data
+
+DELETE /api/user/{id} --> delete a user
