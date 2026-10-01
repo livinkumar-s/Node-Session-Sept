@@ -134,6 +134,16 @@ Routes
 --------
 >> It defines what server should do when a client5 req a specific URL using a specific HTTP method
 
+API --> Application Programming Interface 
+---------------------------------------------
+>> It defines how one application can communicate with another.
+Ex: REST....
+
+REST --> Representational State Transfer 
+it generally uses:
+HTTP methods
+URL representing resources
+Status
 
 
 UserData
@@ -154,3 +164,33 @@ GET /api/user/{id} --> single user data
 PUT /api/user/{id}  --> updates a user data
 
 DELETE /api/user/{id} --> delete a user
+
+
+Database 
+---------
+>> It is ordered collection of data. data can be manipulated very easily.
+
+MongoDB  --> NoSQL DB 
+-----------------------
+>> it stores data in JSON like for format "BSON".
+Database --> Collections --> Documents.
+
+MongoDB Atlas 
+------------
+Cloud Database Service
+
+Cluster --> DBs --> Collection ---> Docs
+
+Schema 
+---------
+>> It defines the structure of a documents 
+
+Model 
+--------
+>> It is created from schema and is used to create a collection in mongoDB
+
+create(doc)
+find() --> get all data 
+findById(id)
+findByIdAndUpdate(id)
+findByIdAndDelete(id)
