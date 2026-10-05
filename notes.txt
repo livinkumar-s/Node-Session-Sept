@@ -192,8 +192,31 @@ Model
 --------
 >> It is created from schema and is used to create a collection in mongoDB
 
-create(doc)
-find() --> get all data 
-findById(id)
-findByIdAndUpdate(id)
+CREATE 
+----------
+.create(doc)
+.insertMany([doc1,doc2....])
+
+READ 
+-----
+.find(filter)
+.findOne()
+.findById()
+
+UPDATE 
+---------
+findByIdAndUpdate(id,doc)
+findOneAndUpdate(filter,doc)
+updateOne(filter,doc)
+updateMany(filter,doc)
+
+DELETE 
+---------
 findByIdAndDelete(id)
+findOneAndDelete(filter)
+deleteMany(filter)
+
+
+Operators to Perform Filterations 
+----------------------------------
+{fieldName:value} equality
