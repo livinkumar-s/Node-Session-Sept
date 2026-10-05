@@ -34,6 +34,9 @@ Import
 ------
 const {d1,d2}=require(file path)
 
+require() --> type: commonJS 
+import --> type: module
+
 npm --> node package manager
 ------------------------------
 To initiate npm directory --> npm init
