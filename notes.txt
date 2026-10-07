@@ -220,3 +220,23 @@ deleteMany(filter)
 Operators to Perform Filterations 
 ----------------------------------
 {fieldName:value} equality
+
+Comparison Operators 
+------------------------
+$gt --> Greater than... {age:{$gt:20}}
+$lt --> Lesser than
+$gte 
+$lte
+$ne --> not equal
+
+$in ---> in
+$nin ---> not in
+
+Logical Operators 
+--------------------
+$and:[cond1,cond2....]
+$or:[c1,c2...]
+
+To filter Strings with regex 
+------------------------------
+{strtFieldName:{$regex:"pattern"}}
