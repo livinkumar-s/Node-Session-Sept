@@ -240,3 +240,25 @@ $or:[c1,c2...]
 To filter Strings with regex 
 ------------------------------
 {strtFieldName:{$regex:"pattern"}}
+
+
+User(name,age,mailId), Post(title,content,userId)
+---------------------------------------------------
+
+USER Model 
+------------
+
+POST /api/user/ (name,age,mailId) --> add user
+GET /api/user/  --> all userdata
+GET /api/user/:id --> user data 
+PUT /api/user/:id - (name,age,mailId) --> update the user
+DELETE /api/user/:id  --> delete the user
+
+
+Post Model 
+--------------
+POST /api/post/ (title,content,userId)
+GET /api/post/  all post 
+GET /api/post/:postId post by its id 
+GET /api/post/user/:userId 
+
