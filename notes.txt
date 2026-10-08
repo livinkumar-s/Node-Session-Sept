@@ -262,3 +262,25 @@ GET /api/post/  all post
 GET /api/post/:postId post by its id 
 GET /api/post/user/:userId 
 
+Authentication 
+------------------
+>> It verifies users identity.
+
+Authorization 
+---------------
+>> It happens after Authentication. it decides what user is allowed to do
+
+Sign Up --> registering yourself (username, emailId, pass)
+Log in --> entering the app using the credential
+
+when you access protected resources --> app verifies you.
+Client(Signup) --> Server(encrypt the pass) --> DB
+Client (Log in (credentials)) --> Server(token) --> Client(token)
+
+API Design 
+----------
+
+USER: (name, username, password, mailId)
+-------
+POST /api/user/signup (name,username,password,maild) --> {success:true, message:"User Registered"}
+POST /api/user/login (mailId, password) --> {success:true, message:"User Registered", token:""}
