@@ -43,7 +43,8 @@ export const login = async (req, res) => {
             return res.status(400).json({ success: false, message: "Please provide all required field" })
         }
 
-        const existingUser = await User.find({ $or: [{ mail: userData.mail }] }) //[]
+        const existingUser = await User.find({ mail: userData.mail}) //[]
+        
 
         if (!existingUser.length > 0) {
             return res.status(400).json({ success: false, message: "User Not registered" })            
@@ -53,10 +54,17 @@ export const login = async (req, res) => {
         if (!isPassOk) {
             return res.status(400).json({ success: false, message: "Invalid Credintials..!" })
         }
+       
 
-        const token = jsonwebtoken.sign({ _id: existingUser._id, username: existingUser.username }, process.env.SECTRET_KEY, { expiresIn: "24h" })
+        const token = jsonwebtoken.sign({ _id: existingUser[0]._id, username: existingUser[0].username }, process.env.SECTRET_KEY, { expiresIn: "24h" })
 
-        res.status(200).json({ success: true, message: "Logged In", token })
+        res.cookie("token",token,{
+            httpOnly:true,
+            secure:false,
+            samesite:"lax",
+            maxAge:1000*60*60*24
+        })
+        res.status(200).json({ success: true, message: "Logged In" })
 
 
 

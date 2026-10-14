@@ -268,7 +268,10 @@ Authentication
 
 Authorization 
 ---------------
->> It happens after Authentication. it decides what user is allowed to do
+>> It happens after Authentication. it decides what user is allowed to do.
+
+>>Cookies 
+>>Header
 
 Sign Up --> registering yourself (username, emailId, pass)
 Log in --> entering the app using the credential
@@ -279,8 +282,22 @@ Client (Log in (credentials)) --> Server(token) --> Client(token)
 
 API Design 
 ----------
-
 USER: (name, username, password, mailId)
 -------
 POST /api/user/signup (name,username,password,maild) --> {success:true, message:"User Registered"}
 POST /api/user/login (mailId, password) --> {success:true, message:"User Registered", token:""}
+
+
+POST  
+-----
+POST /api/post/create {title, content} (token) --> Authorize--> create post 
+PUT /api/post/update/:id {title, content} (token) --> Authorize--> update post 
+DELETE /api/post/delete/:id  (token) --> Authorize--> delete post 
+
+
+Client --> Register
+Client --> Login (mail, pass) --> Server --> Client(token(id,username)--> COokie)
+
+server (cookie token) --> client
+
+hello.com/server hello.com
